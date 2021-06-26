@@ -1,0 +1,24 @@
+{
+  "name": "ecommercesite",
+  "version": "1.0.0",
+  "description": "Example eCommerce Website using MERN Stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thatCashBar/eCommerceSite.git"
+  },
+  "author": "Jaxon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thatCashBar/eCommerceSite/issues"
+  },
+  "homepage": "https://github.com/thatCashBar/eCommerceSite#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14",
+    "nodemon": "^2.0.7"
+  }
+}
