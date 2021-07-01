@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
-
 var mongoDbUrl = 'mongodb+srv://Jaxon:jaxon@cluster0.qypdd.mongodb.net/eCommerce-Store';
-
 mongoose.connect(mongoDbUrl, {useUnifiedTopology: true, useNewUrlParser: true});
-
 var dbConnect = mongoose.connection;
 
 dbConnect.on('error', ()=> {
