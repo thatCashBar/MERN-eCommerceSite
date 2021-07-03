@@ -13,4 +13,15 @@ router.get('/getallproducts', (req, res) => {
     })
 });
 
+router.post('/getproductbyid', (req, res) => {
+    Product.find({_id: req.body.productid}, (error, result) => {
+        if (!error) {
+            return res.send(result[0]);
+        }
+        else {
+            return res.status(400).json({ message: 'Something went wrong!' });
+        }
+    })
+});
+
 module.exports = router;

@@ -21,7 +21,7 @@ export default function Homeview() {
         <div>
             <div className="row justify-content-center">
                 {loading ? (<h1>Loading...</h1>) : error ? (<h1>Something went wrong!</h1>) : (products.map(product => {
-                    return <div className='col-md-3 m-3 card p-2'>
+                    return <div className='col-md-3 m-3 card p-2' key={product._id}>
                         <Product product={product} />
                     </div>
                 }))}
