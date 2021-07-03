@@ -1,7 +1,8 @@
 import React from 'react';
-import products from '../products';
 
 export default function ProductInfoview({ match }) {
+
+    const products = [];
 
     const productId = match.params.id;
 
