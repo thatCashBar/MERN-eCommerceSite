@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export default function Navbar() {
 
-    const addToCartReducer = useSelector(state => state.addToCartReducer);
-    const { cartItems } = addToCartReducer;
+    const cartReducer = useSelector(state => state.cartReducer);
+    const { cartItems } = cartReducer;
 
     return (
         <div>
