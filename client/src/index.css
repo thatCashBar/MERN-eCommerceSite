@@ -34,8 +34,9 @@ h1{
   height: 200px !important;
 }
 
-.bigImg {
-  height: 300px !important;
+.big-img {
+  max-width: 640px !important;
+  max-height: 640px !important;
 }
 
 p {

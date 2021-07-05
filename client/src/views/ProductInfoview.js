@@ -6,13 +6,12 @@ import { getProductById } from '../actions/productActions';
 export default function ProductInfoview({ match }) {
     const productId = match.params.id;
     const dispatch = useDispatch();
-    const [quantity, setQuantity] = useState(1); 
+    const [quantity, setQuantity] = useState(1);
 
     const getProductByIdState = useSelector(state => state.getProductByIdReducer);
     const { product, loading, error } = getProductByIdState;
 
-    function _addToCart()
-    {
+    function _addToCart() {
         dispatch(addToCart(product, quantity));
     }
 
@@ -25,12 +24,12 @@ export default function ProductInfoview({ match }) {
 
             {loading ? (<h1>Loading...</h1>)
                 : error ? (<h1>Something went wrong!</h1>)
-                    : <div className="row mt-5">
+                    : <div className="row mt-3">
                         <div className="col-md-6">
                             <div className="card p-2 m-3">
-                                <h1>{product.name}</h1>
-                                <img src={product.image} className='img-fluid m-3 bigImg' />
-                                <p>{product.description}</p>
+                                <h1 style={{ margin: '8px auto' }}>{product.name}</h1>
+                                <img src={product.image} className='big-img' style={{ margin: '0 auto' }} />
+                                <p style={{margin: '16px auto 0 auto'}}>{product.description}</p>
                             </div>
                         </div>
 
@@ -39,7 +38,7 @@ export default function ProductInfoview({ match }) {
                                 <h1>Price : {product.price}</h1>
                                 <hr />
                                 <h1>Select Quantity</h1>
-                                <select value={quantity} onChange={(e)=>{setQuantity(e.target.value)}}>
+                                <select value={quantity} onChange={(e) => { setQuantity(e.target.value) }}>
                                     {[...Array(product.countInStock).keys()].map((x, i) => {
                                         return <option value={i + 1}>{i + 1}</option>
                                     })}
