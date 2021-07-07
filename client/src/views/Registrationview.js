@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { registerNewUser } from '../actions/userActions';
 
 export default function Registrationview() {
 
@@ -8,6 +10,8 @@ export default function Registrationview() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+    const dispatch = useDispatch();
+
     function register(event) {
         event.preventDefault();
         if (password == confirmPassword) {
@@ -16,6 +20,7 @@ export default function Registrationview() {
                 email: email,
                 password: password
             }
+            dispatch(registerNewUser(user));
         }
         else {
             alert('Passwords do not match!');
