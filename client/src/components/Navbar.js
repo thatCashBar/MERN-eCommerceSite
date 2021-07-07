@@ -16,7 +16,7 @@ export default function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-auto">
-                            <a className="nav-link" href="/">Login</a>
+                            <a className="nav-link" href="/login">Login</a>
                             <a className="nav-link" href="/cart"><i className="fas fa-shopping-cart"></i>{cartItems.length}</a>
                         </div>
                     </div>

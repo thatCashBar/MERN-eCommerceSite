@@ -55,7 +55,7 @@ export default function Cartview() {
                     <hr />
                     <h2 className='text-center'>SubTotal : ${subTotal}</h2>
                     <hr />
-                    <button className='btn'>PAY NOW</button>
+                    <button className='btn' style={{margin: '0 auto 16px auto'}}>PAY NOW</button>
 
                 </div>
             </div>

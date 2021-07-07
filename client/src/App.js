@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Homeview from './views/Homeview';
 import ProductInfoview from './views/ProductInfoview';
 import Cartview from './views/Cartview';
+import Loginview from './views/Loginview'
+import Registrationview from './views/Registrationview'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path='/' component={Homeview} exact/>
         <Route path='/product/:id' component={ProductInfoview}/>
         <Route path='/cart' component={Cartview} exact/>
+        <Route path='/login' component={Loginview} exact/>
+        <Route path='/register' component={Registrationview} exact/>
       </BrowserRouter>
     </div>
   );
